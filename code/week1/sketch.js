@@ -6,4 +6,5 @@ function setup() {
     background(220);
     circle(100,100,100)
     rect(100,100,100)
+    
   }
