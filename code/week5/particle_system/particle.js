@@ -4,20 +4,24 @@ class Particle {
         this.vel = createVector(0, 0);
         this.acc = createVector(0, 0)
         this.r = r;
-        this.fricition = 0.995;
+        this.fricition = 0.98;
         this.maxAge = random(100,300)
         this.age = 0
+        this.brightness = 0
 
     }
 
 
-    update() {
-        this.age++
+    update(brightness) {
+        //this.age++
         this.vel.add(this.acc)
         this.pos.add(this.vel)
         this.acc.mult(0);
         //this.bounce()
         this.vel.mult(this.fricition)
+        this.brightness = brightness;
+        this.r = map(this.brightness,0,255,5,20)
+        
 
     }
 
@@ -61,7 +65,7 @@ class Particle {
     display() {
         noStroke()
         const alpha = map(this.age,0,this.maxAge, 255,0)
-        fill(255,alpha)
+        fill(pow(this.brightness, 1.1),alpha)
         circle(this.pos.x, this.pos.y, this.r * 2)
 
     }
