@@ -1,0 +1,29 @@
+{
+    "stations":[
+        {
+            "id": 1,
+            "name": "brooklyn one",
+            "rank": 5,
+            "borough": "Brooklyn"
+        },
+        {
+            "id": 2,
+            "name": "queens one",
+            "rank": 3,
+            "borough": "Queens" 
+        },
+        {
+            "id": 3,
+            "name": "queens two",
+            "rank": 4,
+            "borough": "Queens" 
+        },
+        {
+            "id": 4,
+            "name":"brooklyn two",
+            "rank": 1,
+            "borough": "Brooklyn"
+        }
+    ],
+    "trips": []
+}
