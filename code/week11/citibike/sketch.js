@@ -55,4 +55,21 @@ function draw (){
     background(190);
     stations.forEach(s=>s.display());
     trips.forEach(t=>t.display(currentTime));
+
+    fill(0)
+    textSize(18)
+    const time = new Date(currentTime)
+    text(formatTime(time),50,50)
+}
+
+function formatTime(data){
+    let hours = data.getHours();
+    let minutes = data.getMinutes();
+    let ampm = hours >= 12 ? 'pm' : 'am';
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    const time = hours + ':' + minutes + ' ' + ampm;
+    return hours + ':' + minutes + ' ' + ampm
 }
